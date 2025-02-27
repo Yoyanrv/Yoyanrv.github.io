@@ -3,71 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio - Máquinas HackTheBox & Vulnhub</title>
+    <title>Mi Portafolio - Ciberseguridad</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Portafolio de Pentesting</h1>
-            <p class="subtitle">Máquinas resueltas en Vulnhub y HackTheBox</p>
-            <nav>
-                <ul>
-                    <li><a href="#vulnhub">Vulnhub</a></li>
-                    <li><a href="#hackthebox">HackTheBox</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1>Mi Portafolio de Pentesting</h1>
+        <nav>
+            <a href="#vulnhub">Vulnhub</a>
+            <a href="#hackthebox">HackTheBox</a>
+        </nav>
     </header>
 
-    <main>
-        <section id="vulnhub">
-            <div class="container">
-                <h2>Máquinas Vulnhub</h2>
-                <div class="project-grid">
-                    <div class="project-card">
-                        <img src="images/vulnhub-machine1.jpg" alt="Máquina 1">
-                        <h3>Máquina: MrRobot</h3>
-                        <p>Un clásico de Vulnhub inspirado en la serie Mr. Robot.</p>
-                        <a href="writeups/mrrobot.html" target="_blank">Ver Writeup</a>
-                    </div>
+    <section id="vulnhub">
+        <h2>Máquinas de Vulnhub</h2>
+        <div class="project">
+            <h3>MrRobot</h3>
+            <p>Inspirada en la serie, esta máquina introduce varias técnicas esenciales.</p>
+            <a href="#">Ver Writeup</a>
+        </div>
+        <div class="project">
+            <h3>DC-1</h3>
+            <p>Máquina orientada a la enumeración básica.</p>
+            <a href="#">Ver Writeup</a>
+        </div>
+    </section>
 
-                    <div class="project-card">
-                        <img src="images/vulnhub-machine2.jpg" alt="Máquina 2">
-                        <h3>Máquina: DC-1</h3>
-                        <p>Máquina orientada a principiantes, perfecta para aprender enumeración.</p>
-                        <a href="writeups/dc1.html" target="_blank">Ver Writeup</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="hackthebox">
-            <div class="container">
-                <h2>Máquinas HackTheBox</h2>
-                <div class="project-grid">
-                    <div class="project-card">
-                        <img src="images/htb-machine1.jpg" alt="Máquina 1">
-                        <h3>Máquina: Shocker</h3>
-                        <p>Máquina de nivel fácil donde exploras vulnerabilidades en Shellshock.</p>
-                        <a href="writeups/shocker.html" target="_blank">Ver Writeup</a>
-                    </div>
-
-                    <div class="project-card">
-                        <img src="images/htb-machine2.jpg" alt="Máquina 2">
-                        <h3>Máquina: OpenAdmin</h3>
-                        <p>Máquina que explota un panel de administración OpenNetAdmin vulnerable.</p>
-                        <a href="writeups/openadmin.html" target="_blank">Ver Writeup</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+    <section id="hackthebox">
+        <h2>Máquinas de HackTheBox</h2>
+        <div class="project">
+            <h3>Shocker</h3>
+            <p>Exploitación de Shellshock en un servidor web.</p>
+            <a href="#">Ver Writeup</a>
+        </div>
+        <div class="project">
+            <h3>OpenAdmin</h3>
+            <p>Explotación de un panel OpenNetAdmin.</p>
+            <a href="#">Ver Writeup</a>
+        </div>
+    </section>
 
     <footer>
-        <div class="container">
-            <p>Creado por [Tu Nombre] | 2025</p>
-        </div>
+        <p>Creado por [Tu Nombre] | 2025</p>
     </footer>
 </body>
 </html>
+
