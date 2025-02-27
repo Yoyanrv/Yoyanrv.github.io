@@ -256,14 +256,26 @@ a:hover, .btn:hover {
 }
 
 .imagenproyect {
-    width: 100%;
+    width: 80%;  /* La imagen ocupa el 80% del contenedor */
+    max-width: 400px;  /* Tamaño máximo de la imagen */
     height: auto;
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
     transition: transform 0.3s;
+    margin: 0 auto;
+    display: block;
 }
 
-.imagenproyect:hover {
-    transform: scale(1.05);
+@media (max-width: 768px) {
+    .imagenproyect {
+        width: 60%;  /* La imagen ocupa el 60% del contenedor en pantallas más pequeñas */
+    }
 }
+
+@media (max-width: 480px) {
+    .imagenproyect {
+        width: 100%;  /* En pantallas muy pequeñas (como móviles) ocupa el 100% */
+    }
+}
+
