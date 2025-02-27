@@ -158,3 +158,22 @@ footer {
     background: #af4c4c;
     color: #fff;
 }
+
+#contacto {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+}
+
+.email-link {
+    color: #4CAF50;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.email-link:hover {
+    color: white;
+}
