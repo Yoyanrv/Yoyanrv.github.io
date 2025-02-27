@@ -143,13 +143,13 @@ footer {
 
 .skill {
     background: #333;
-    color: #4CAF50;
+    color: #af4c4c;
     padding: 8px 15px;
     border-radius: 5px;
     font-weight: bold;
     text-transform: uppercase;
     font-size: 0.9rem;
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
     transition: transform 0.3s, background 0.3s;
 }
 
