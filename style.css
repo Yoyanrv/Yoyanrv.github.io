@@ -94,10 +94,25 @@ h2 {
 
 /* Footer */
 footer {
+    background: #111;
+    color: #ddd;
     text-align: center;
-    margin-top: 20px;
-    color: #888;
+    padding: 15px;
+    border-top: 2px solid #4CAF50;
+    margin-top: 30px;
+    font-size: 0.9rem;
 }
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
 
 .logo {
     width: 60px;
@@ -176,4 +191,66 @@ footer {
 
 .email-link:hover {
     color: white;
+}
+
+/* Efectos hover para enlaces y botones */
+a, .btn {
+    text-decoration: none;
+    color: #af4c4c;
+    transition: transform 0.3s, color 0.3s;
+}
+
+a:hover, .btn:hover {
+    transform: translateY(-5px);
+    color: #fff;
+}
+
+/* Efectos hover en las celdas de proyecto */
+.proyecto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #af4c4c;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 20px;
+    text-align: center;
+    display: none;
+    transition: background-color 0.3s;
+}
+
+.scroll-top:hover {
+    background-color: #8e3838;
+}
+
+.scroll-top.show {
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .proyecto {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #contacto form input, #contacto form textarea {
+        width: 100%;
+    }
 }

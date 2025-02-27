@@ -73,10 +73,25 @@
     </section>
     
 
+    <a href="#" class="scroll-top">↑ Volver arriba</a>
+
+
     <footer>
         <p>Hecho por <a href="https://github.com/Yoyanrv" target="_blank">Johan Rodriguez Velázquez</a></p>
         <p>&copy; 2025 | Todos los derechos reservados</p>
     </footer>
+
+    <script>
+        window.onscroll = function() {
+            var scrollTopButton = document.querySelector('.scroll-top');
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                scrollTopButton.classList.add('show');
+            } else {
+                scrollTopButton.classList.remove('show');
+            }
+        }
+    </script>
+    
 </body>
 </html>
 
