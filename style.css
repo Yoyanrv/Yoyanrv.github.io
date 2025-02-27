@@ -217,20 +217,24 @@ a:hover, .btn:hover {
     right: 30px;
     background-color: #af4c4c;
     color: white;
-    padding: 10px;
-    border-radius: 5%;
-    font-size: 20px;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 18px;
     text-align: center;
     display: none;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s, opacity 0.5s ease-out;
+    opacity: 0;
 }
-
 .scroll-top:hover {
     background-color: #8e3838;
+    transform: scale(1.1); /* Agrandar ligeramente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);  /* Agregar sombra suave */
 }
+
 
 .scroll-top.show {
     display: block;
+    opacity: 1;
 }
 
 /* Responsive Design */
