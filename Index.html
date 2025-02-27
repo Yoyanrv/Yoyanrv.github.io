@@ -44,7 +44,7 @@
         </div>
 
         <div class="project">
-            <div class="imagenproyect">
+            <div>
                 <img src="images/skullcave.png" alt="SkullCave: 1" class="imagenproyect">
             </div>        
             <h3>SkullCave: 1</h3>
@@ -75,7 +75,7 @@
     </section>
     
 
-    <a href="#" class="scroll-top">↑ Volver arriba</a>
+    <a href="#" class="scroll-top">Go Back</a>
 
 
     <footer>
@@ -86,13 +86,16 @@
     <script>
         window.onscroll = function() {
             var scrollTopButton = document.querySelector('.scroll-top');
-            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            
+            // Verifica si el usuario ha llegado al final de la página
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
                 scrollTopButton.classList.add('show');
             } else {
                 scrollTopButton.classList.remove('show');
             }
         }
     </script>
+    
     
 </body>
 </html>
