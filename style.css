@@ -24,16 +24,26 @@ header h1 {
     color: #ffffff;
 }
 
-nav a {
-    color: #af4c4c;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-    transition: 0.3s;
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+    padding: 10px 0;
+    z-index: 100;
+    text-align: center;
 }
-
-nav a:hover {
+nav a {
     color: white;
+    margin: 0 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: #f00;
+    text-shadow: 0 0 10px #f00;
 }
 
 /* Secciones */
