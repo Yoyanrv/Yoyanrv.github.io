@@ -254,3 +254,16 @@ a:hover, .btn:hover {
         width: 100%;
     }
 }
+
+.imagenproyect {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.imagenproyect:hover {
+    transform: scale(1.05);
+}
