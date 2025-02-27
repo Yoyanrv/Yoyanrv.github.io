@@ -164,11 +164,11 @@ footer {
     padding: 20px;
     background: #222;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
 }
 
 .email-link {
-    color: #4CAF50;
+    color: #af4c4c;
     font-weight: bold;
     text-decoration: none;
     transition: color 0.3s;
