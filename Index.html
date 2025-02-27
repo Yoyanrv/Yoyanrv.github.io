@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio - Ciberseguridad</title>
+    <title>Mi Portafolio - Máquinas HackTheBox & Vulnhub</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Mi Portafolio de Ciberseguridad</h1>
+            <h1>Portafolio de Pentesting</h1>
+            <p class="subtitle">Máquinas resueltas en Vulnhub y HackTheBox</p>
             <nav>
                 <ul>
                     <li><a href="#vulnhub">Vulnhub</a></li>
@@ -22,18 +23,20 @@
     <main>
         <section id="vulnhub">
             <div class="container">
-                <h2>Proyectos de Vulnhub</h2>
-                <div class="project-list">
-                    <!-- Agrega tus proyectos aquí -->
-                    <div class="project">
-                        <h3>Proyecto 1</h3>
-                        <p>Descripción breve del proyecto de Vulnhub.</p>
-                        <a href="link-al-writeup" target="_blank">Ver Writeup</a>
+                <h2>Máquinas Vulnhub</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <img src="images/vulnhub-machine1.jpg" alt="Máquina 1">
+                        <h3>Máquina: MrRobot</h3>
+                        <p>Un clásico de Vulnhub inspirado en la serie Mr. Robot.</p>
+                        <a href="writeups/mrrobot.html" target="_blank">Ver Writeup</a>
                     </div>
-                    <div class="project">
-                        <h3>Proyecto 2</h3>
-                        <p>Descripción breve del proyecto de Vulnhub.</p>
-                        <a href="link-al-writeup" target="_blank">Ver Writeup</a>
+
+                    <div class="project-card">
+                        <img src="images/vulnhub-machine2.jpg" alt="Máquina 2">
+                        <h3>Máquina: DC-1</h3>
+                        <p>Máquina orientada a principiantes, perfecta para aprender enumeración.</p>
+                        <a href="writeups/dc1.html" target="_blank">Ver Writeup</a>
                     </div>
                 </div>
             </div>
@@ -41,18 +44,20 @@
 
         <section id="hackthebox">
             <div class="container">
-                <h2>Proyectos de HackTheBox</h2>
-                <div class="project-list">
-                    <!-- Agrega tus proyectos aquí -->
-                    <div class="project">
-                        <h3>Proyecto 1</h3>
-                        <p>Descripción breve del proyecto de HackTheBox.</p>
-                        <a href="link-al-writeup" target="_blank">Ver Writeup</a>
+                <h2>Máquinas HackTheBox</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <img src="images/htb-machine1.jpg" alt="Máquina 1">
+                        <h3>Máquina: Shocker</h3>
+                        <p>Máquina de nivel fácil donde exploras vulnerabilidades en Shellshock.</p>
+                        <a href="writeups/shocker.html" target="_blank">Ver Writeup</a>
                     </div>
-                    <div class="project">
-                        <h3>Proyecto 2</h3>
-                        <p>Descripción breve del proyecto de HackTheBox.</p>
-                        <a href="link-al-writeup" target="_blank">Ver Writeup</a>
+
+                    <div class="project-card">
+                        <img src="images/htb-machine2.jpg" alt="Máquina 2">
+                        <h3>Máquina: OpenAdmin</h3>
+                        <p>Máquina que explota un panel de administración OpenNetAdmin vulnerable.</p>
+                        <a href="writeups/openadmin.html" target="_blank">Ver Writeup</a>
                     </div>
                 </div>
             </div>
@@ -61,7 +66,7 @@
 
     <footer>
         <div class="container">
-            <p>Creado por Yoyanrv | 2025</p>
+            <p>Creado por [Tu Nombre] | 2025</p>
         </div>
     </footer>
 </body>
