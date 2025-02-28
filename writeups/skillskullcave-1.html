@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Skills y Herramientas</title>
+    <link rel="stylesheet" href="../style.css">  <!-- El global -->
+    <link rel="stylesheet" href="style_skills.css"> <!-- Específico de skills -->
+
+</head>
+<body>
+
+<header>
+    <nav>
+        <img src="../images/hacker-logo.png" alt="Logo Hacker" class="logo">
+        <h1>Skills y Herramientas</h1>
+        <a href="skullcave-1.html">Info General</a>
+        <a href="../index.html">Inicio</a> 
+        <a href="../contactos.html">Contacto</a>
+       
+    </nav>
+</header>
+
+<div style="height: 150px;"></div>
+
+<main>
+    <!-- Botones para mostrar la información de las herramientas -->
+    <button class="tool-button" onclick="toggleTool('nmap')">Nmap</button>
+    <button class="tool-button" onclick="toggleTool('burp')">Burp Suite</button>
+    <button class="tool-button" onclick="toggleTool('ghydra')">Ghydra</button>
+
+    <!-- Secciones de las herramientas, inicialmente ocultas -->
+    <div id="nmap" class="tool-content">
+        <h2>Nmap</h2>
+        <p><strong>Descripción:</strong> Nmap (Network Mapper) es una herramienta open-source usada para la exploración de redes y auditorías de seguridad. Se utiliza para descubrir hosts y servicios en una red.</p>
+        <h3>Comandos básicos de uso:</h3>
+        <pre><code>
+# Escaneo básico de puertos
+nmap -p 1-65535 192.168.1.1
+
+# Escaneo de servicios
+nmap -sV 192.168.1.1
+        </code></pre>
+        <h3>Casos de uso:</h3>
+        <ul>
+            <li>Descubrir puertos abiertos en un host.</li>
+            <li>Detección de servicios en puertos específicos.</li>
+            <li>Identificación de versiones de servicios.</li>
+        </ul>
+    </div>
+
+    <div id="burp" class="tool-content">
+        <h2>Burp Suite</h2>
+        <p><strong>Descripción:</strong> Burp Suite es una plataforma de pruebas de penetración web. Permite interceptar y modificar el tráfico entre el navegador y el servidor, así como realizar pruebas de seguridad.</p>
+        <h3>Comandos básicos de uso:</h3>
+        <pre><code>
+# Configurar un proxy en Burp Suite para interceptar tráfico HTTP/HTTPS.
+        </code></pre>
+        <h3>Casos de uso:</h3>
+        <ul>
+            <li>Interceptar y modificar tráfico web.</li>
+            <li>Escanear vulnerabilidades web.</li>
+            <li>Inyección de payloads en formularios y parámetros.</li>
+        </ul>
+    </div>
+
+    <div id="ghydra" class="tool-content">
+        <h2>Ghydra</h2>
+        <p><strong>Descripción:</strong> Ghydra es una herramienta de ingeniería inversa que permite analizar y descompilar archivos binarios y software compilado para entender su funcionamiento y buscar vulnerabilidades.</p>
+        <h3>Comandos básicos de uso:</h3>
+        <pre><code>
+# Decompilación de un archivo binario
+ghydra -file /path/to/binary
+        </code></pre>
+        <h3>Casos de uso:</h3>
+        <ul>
+            <li>Reversa binarios para encontrar vulnerabilidades.</li>
+            <li>Descompilar código para análisis estático.</li>
+            <li>Automatización de análisis con scripts personalizados.</li>
+        </ul>
+    </div>
+</main>
+
+<a href="#" class="scroll-top">↑</a>
+
+<footer>
+    <p>Hecho por <a href="https://github.com/Yoyanrv" target="_blank">Johan Rodriguez Velázquez</a></p>
+    <p>&copy; 2025 | Todos los derechos reservados</p>
+</footer>
+
+<script>
+    function toggleTool(toolId) {
+        // Primero ocultamos todas las secciones
+        const toolContents = document.querySelectorAll('.tool-content');
+        toolContents.forEach(content => content.style.display = 'none');
+
+        // Luego mostramos la sección correspondiente al botón clickeado
+        const selectedTool = document.getElementById(toolId);
+        selectedTool.style.display = 'block';
+    }
+</script>
+
+</body>
+</html>

@@ -300,3 +300,37 @@ a:hover, .btn:hover {
     }
 }
 
+.terminal-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    color: rgb(255, 0, 0);
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    z-index: 9999;
+    opacity: 1;
+    animation: fadeOut 1s ease-out forwards;
+    animation-delay: 1s;
+}
+
+.terminal-text::after {
+    content: "_";
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}

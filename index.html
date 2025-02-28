@@ -3,34 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio - Ciberseguridad</title>
+    <title>Yoyanrv | Ciberseguridad</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="terminal-loader" id="loader">
+        <p class="terminal-text">Cargando Entorno...</p>
+    </div>
     <header>
         <nav>
         <img src="images/hacker-logo.png" alt="Logo Hacker" class="logo">
-        <h1>YoyanRv-WriteUp</h1>
+        <h1>Inicio</h1>
             <a href="#vulnhub">Vulnhub</a>
             <a href="#hackthebox">HackTheBox</a>
             <a href="#proyectos">Proyectos</a>
-            <a href="#skills">Skills</a>
-            <a href="#contacto">Contacto</a>
+            <a href="contactos.html">Contacto</a>
         </nav>
     </header>
-
-    <section id="skills" class="fade-in">
-        <h2>Skills y Herramientas</h2>
-        <div class="skills-container">
-            <div class="skill">Nmap</div>
-            <div class="skill">Burp Suite</div>
-            <div class="skill">Gobuster</div>
-            <div class="skill">SQLmap</div>
-            <div class="skill">Ghydra</div>
-            <div class="skill">Wireshark</div>
-            <div class="skill">Metasploit</div>
-        </div>
-    </section>
+<div style="height: 150px;"></div>
 
     <section id="vulnhub" class="fade-in">
         <h2>Máquinas de Vulnhub</h2>
@@ -70,15 +60,8 @@
             <a href="#">Ver Writeup</a>
         </div>
     </section>
-
-    <section id="contacto" class="fade-in">
-        <h2>Contacto</h2>
-        <p>Si quieres colaborar o tienes alguna propuesta, puedes escribirme a:</p>
-        <p><a href="mailto:tu_correo@ejemplo.com" class="email-link">johanrodriguezvelazquez@gmail.com</a></p>
-    </section>
     
-
-    <a href="#" class="scroll-top">Go Up</a>
+    <a href="#" class="scroll-top">↑</a>
 
 
     <footer>
@@ -99,6 +82,13 @@
         }
     </script>
     
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            setTimeout(() => {
+                document.getElementById('loader').style.display = 'none';
+            }, 2000);  // 2 segundos
+        });
+    </script>
     
 </body>
 </html>
